@@ -1,1 +1,1 @@
-worker: node out/index.js
+worker: npm run setup && npm start
