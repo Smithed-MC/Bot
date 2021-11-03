@@ -9,6 +9,6 @@ export default {
 
 	execute:async (interaction: CommandInteraction) => {
 		register()
-		await interaction.reply('Reloaded commands');
+		await interaction.reply({content:'Reloaded commands',ephemeral:true});
 	},
 };

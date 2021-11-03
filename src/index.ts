@@ -2,8 +2,9 @@ import fs from 'fs';
 import { Client, Collection, CommandInteraction, Intents } from 'discord.js';
 import './setup-firebase.js';
 import { SlashCommandBuilder } from '../node_modules/@discordjs/builders/dist/index.js';
-const { token } = require('./config');
+import dotenv from 'dotenv'
 
+dotenv.config()
 
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
 
@@ -50,4 +51,4 @@ client.on('interactionCreate', async interaction => {
 client.on('messageCreate', (message) => {
   console.log(message)
 })
-client.login(token)
+client.login(process.env.TOKEN)

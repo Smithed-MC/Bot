@@ -1,5 +1,4 @@
 import firebase from 'firebase'
-import { smithedEmail, smithedPassword } from './config';
 
 const firebaseApp = firebase.initializeApp({
 	apiKey: "AIzaSyDX-vLCBhO8StKAxnpvQ2EW8lz3kzYn4Qk",
@@ -11,7 +10,4 @@ const firebaseApp = firebase.initializeApp({
 	measurementId: "G-40SRKC35Z0"
 })
 
-firebaseApp.auth().signInWithEmailAndPassword(smithedEmail, smithedPassword).then( () => {
-    console.log('Signed into database')
-})
 export const database = firebaseApp.database() 

@@ -8,6 +8,6 @@
     "firebase": "^8.8.1"
   },
   "scripts": {
-    "start":"tsc && node out/index.js"
+    "start": "tsc && node out/index.js"
   }
 }
